@@ -19,7 +19,7 @@
         /// <returns>The user input as an integer</returns>
         public static int AskForNumber(string text)
         {
-            string response = ""; 
+            string response = "";
             Console.WriteLine(text);
             response = Console.ReadLine();
             int resultnumber = Int32.Parse(response);
