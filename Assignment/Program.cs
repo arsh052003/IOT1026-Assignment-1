@@ -1,4 +1,4 @@
-namespace Assignment
+﻿namespace Assignment
 {
     public static class ArrayReplicator
     {
@@ -39,9 +39,9 @@ namespace Assignment
     static class Program
     {
         static void Main()
-    
+
         {
-            
+
             System.Console.WriteLine("Hello World!");
             /*
             const int Min = 0;
