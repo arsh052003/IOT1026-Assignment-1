@@ -41,7 +41,7 @@ namespace Assignment
         static void Main()
     
         {
-            int[] myVariable = 10;
+            
             System.Console.WriteLine("Hello World!");
             /*
             const int Min = 0;
