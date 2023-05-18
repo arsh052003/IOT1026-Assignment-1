@@ -24,7 +24,8 @@
             response = Console.ReadLine();
             int resultnumber = Int32.Parse(response);
             Console.WriteLine(resultnumber);
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
+            return resultnumber;
         }
 
         /// <summary>
@@ -68,6 +69,7 @@
                 Console.WriteLine($"Original {original[index],-PrintOffset}  {copy[index],4} Copy");
             */
             int myVar = ArrayReplicator.AskForNumber("enter a number: ");
+            Console.WriteLine(myVar);
         }
     }
 }
