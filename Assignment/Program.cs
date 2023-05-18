@@ -1,4 +1,4 @@
-﻿namespace Assignment
+namespace Assignment
 {
     public static class ArrayReplicator
     {
@@ -39,7 +39,10 @@
     static class Program
     {
         static void Main()
+    
         {
+            int[] myVariable = 10;
+            System.Console.WriteLine("Hello World!");
             /*
             const int Min = 0;
             const int Max = 10;
