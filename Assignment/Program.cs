@@ -63,9 +63,10 @@
             const int Max = 10;
             // const int PrintOffset = 4;
 
-            int size = ArrayReplicator.AskForNumberInRange("Enter the number in range: ", Min, Max);
-            Console.WriteLine(size);
-            /*
+            int numInRange = ArrayReplicator.AskForNumberInRange("Enter the number in range: ", Min, Max);
+            Console.WriteLine(numInRange);
+            Console.WriteLine("Enter an array size in range [0-5]");
+            int size = Int32.Parse(Console.ReadLine());
             int[] original = new int[size];
 
             // Fill the original array with user specified integers
@@ -73,7 +74,7 @@
             {
                 original[item] = ArrayReplicator.AskForNumber("Enter a number: ");
             }
-
+            /*
             int[] copy = ArrayReplicator.ReplicateArray(original);
             // Verify original and replicated array are the same
             for (int index = 0; index < size; ++index)
