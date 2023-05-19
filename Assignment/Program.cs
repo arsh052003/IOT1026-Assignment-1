@@ -9,7 +9,14 @@
         /// <returns>A deep copy of the original array</returns>
         public static int[] ReplicateArray(int[] original)
         {
-            throw new NotImplementedException();
+            int[] copyArray = new int[original.Length];
+            for (int j = 0; j < original.Length; ++j)
+            {
+                copyArray[j] = original[j];
+
+            }
+            return copyArray;
+            // throw new NotImplementedException();
         }
 
         /// <summary>
@@ -61,7 +68,7 @@
             System.Console.WriteLine("Hello World!!");
             const int Min = 0;
             const int Max = 10;
-            // const int PrintOffset = 4;
+            const int PrintOffset = 4;
 
             int numInRange = ArrayReplicator.AskForNumberInRange("Enter the number in range: ", Min, Max);
             Console.WriteLine(numInRange);
@@ -74,14 +81,15 @@
             {
                 original[item] = ArrayReplicator.AskForNumber("Enter a number: ");
             }
-            /*
+
             int[] copy = ArrayReplicator.ReplicateArray(original);
             // Verify original and replicated array are the same
             for (int index = 0; index < size; ++index)
                 Console.WriteLine($"Original {original[index],-PrintOffset}  {copy[index],4} Copy");
-            */
+
             int myVar = ArrayReplicator.AskForNumber("enter a number: ");
             Console.WriteLine(myVar);
+
         }
     }
 }
