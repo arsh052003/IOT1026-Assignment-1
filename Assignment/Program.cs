@@ -19,11 +19,11 @@
         /// <returns>The user input as an integer</returns>
         public static int AskForNumber(string text)
         {
-            string response = "";
+            string response = " ";
             Console.WriteLine(text);
             response = Console.ReadLine();
             int resultnumber = Int32.Parse(response);
-            Console.WriteLine(resultnumber);
+
             // throw new NotImplementedException();
             return resultnumber;
         }
@@ -38,7 +38,17 @@
         /// <returns>The user input as an integer</returns>
         public static int AskForNumberInRange(string text, int min, int max)
         {
-            throw new NotImplementedException();
+            string textRange = string.Format("{0} [{1}, {2}]", text, min, max);
+            int rangeNum = ArrayReplicator.AskForNumber(textRange);
+            // throw new NotImplementedException();
+            if (rangeNum >= min && rangeNum <= max)
+            {
+                return rangeNum;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 
@@ -49,12 +59,13 @@
         {
 
             System.Console.WriteLine("Hello World!!");
-            /*
             const int Min = 0;
             const int Max = 10;
-            const int PrintOffset = 4;
+            // const int PrintOffset = 4;
 
-            int size = ArrayReplicator.AskForNumberInRange("Enter the array size: ", Min, Max);
+            int size = ArrayReplicator.AskForNumberInRange("Enter the number in range: ", Min, Max);
+            Console.WriteLine(size);
+            /*
             int[] original = new int[size];
 
             // Fill the original array with user specified integers
