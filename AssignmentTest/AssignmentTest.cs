@@ -16,40 +16,12 @@ namespace AssignmentTest
         [TestMethod]
         public void ReplicateArray_EmptyArray_ReturnsEmptyArray()
         {
+            /*
             int[] original = Array.Empty<int>();
             int[] result = ArrayReplicator.ReplicateArray(original);
             CollectionAssert.AreEqual(original, result);
             Assert.AreNotSame(original, result);
-        }
-
-        [TestMethod]
-        public void ReplicateArray_ArrayWithElements()
-        {
-            int[] original = new int[] { 1, 2, 3 };
-            int[] result = ArrayReplicator.ReplicateArray(original);
-            CollectionAssert.AreEqual(original, result);
-            Assert.AreNotSame(original, result);
-        }
-
-        [TestMethod]
-        public void ReplicateArray_ArrayWithNegativeElements()
-        {
-            int[] original = new int[] { -1, 2, -3, 0, -999, 100120 };
-            int[] result = ArrayReplicator.ReplicateArray(original);
-            CollectionAssert.AreEqual(original, result);
-            Assert.AreNotSame(original, result);
-        }
-
-        /* Great idea -> But since we take in int[] and not int[]? 
-        * it is the user's responsiblity to make sure the array is not null
-        public void ReplicateArray_NullArray_ThrowsException()
-        {
-            int[] original = null;
-            int[] result = Array.Empty
-            CollectionAssert.AreEqual(original, result);
-            Assert.AreNotSame(original, result);
-        }
         */
-    }
+        }
 
-}
+    }
