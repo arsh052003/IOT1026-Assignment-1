@@ -16,12 +16,12 @@ namespace AssignmentTest
         [TestMethod]
         public void ReplicateArray_EmptyArray_ReturnsEmptyArray()
         {
-            /*
+            
             int[] original = Array.Empty<int>();
             int[] result = ArrayReplicator.ReplicateArray(original);
             CollectionAssert.AreEqual(original, result);
             Assert.AreNotSame(original, result);
-        */
+        
         }
 
     }

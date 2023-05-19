@@ -19,6 +19,11 @@
         /// <returns>The user input as an integer</returns>
         public static int AskForNumber(string text)
         {
+            string response = ""; 
+            Console.WriteLine(text);
+            response = Console.ReadLine();
+            int resultnumber = Int32.Parse(response);
+            Console.WriteLine(resultnumber);
             throw new NotImplementedException();
         }
 
@@ -62,6 +67,7 @@
             for (int index = 0; index < size; ++index)
                 Console.WriteLine($"Original {original[index],-PrintOffset}  {copy[index],4} Copy");
             */
+            int myVar = ArrayReplicator.AskForNumber("enter a number: ");
         }
     }
 }
