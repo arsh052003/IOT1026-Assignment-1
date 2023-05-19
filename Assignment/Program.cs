@@ -73,7 +73,16 @@
             int numInRange = ArrayReplicator.AskForNumberInRange("Enter the number in range: ", Min, Max);
             Console.WriteLine(numInRange);
             Console.WriteLine("Enter an array size in range [0-5]");
-            int size = Int32.Parse(Console.ReadLine());
+            int size = 0;
+            while (true)
+            {
+                size = Int32.Parse(Console.ReadLine());
+                if (size > -1 && size < 6)
+                {
+                    break;
+                }
+                Console.WriteLine(size + " is not in the specified range. Try again.");
+            }
             int[] original = new int[size];
 
             // Fill the original array with user specified integers
