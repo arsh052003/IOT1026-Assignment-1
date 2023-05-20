@@ -27,32 +27,39 @@
         /// <returns>The user input as an integer</returns>
         public static int AskForNumber(string text)
         {
+            /*
+                declare string variable for user input
+                declare int variable for return user input as integer
+            */
             string response = "";
-            Console.WriteLine(text);
-            /* 
-               Checking for condition if the string is empty or not
-               While loop forces the user to enter the value as it does not exit until 
-               the value is not null or string.
-             */
             int resultnumber = 0;
+            // give user instructions
+            Console.WriteLine(text);
+            /*
+                 checking user input:
+                 if input is blank or string, prompt user to re-enter value
+                 If input is integer value, return the String value as an integer
+            */
             while (true)
             {
+                // Storing unser input into the string variable
                 response = Console.ReadLine();
-                /*
-                 checking is user input is null, empty or a string. 
-                 if any of these conditions meet, prompt user to renter value
-                 If not, return the String value as an integer
-                */
-                if (string.IsNullOrEmpty(response) || response.All(char.IsLetter))
+                // try to convert String to integer
+                try
                 {
-                    Console.WriteLine("Input not valid. Please enter an integer value. ");
+
+                    resultnumber = Int32.Parse(response); // Conversion of the string into int32
+                    //if able to convert into integer, return it
+                    return resultnumber;
 
                 }
-                else
+                // if we recieve error, we ask user to re-enter value
+                catch (Exception e)
                 {
-                    resultnumber = Int32.Parse(response); // Conversion of the string into int32
-                    return resultnumber;
+                    Console.WriteLine("Please enter valid integer value");
                 }
+
+
             }
         }
 
@@ -68,29 +75,20 @@
         {
             string textRange = string.Format("{0} [{1}, {2}]", text, min, max);
             // Using the function AskForNumber to get user input to avoid repeatibility of the code
-            int rangeNum = ArrayReplicator.AskForNumber(textRange);
+            //int rangeNum = ArrayReplicator.AskForNumber(textRange);
+            int rangeNum = -2;
             /*
                 re prompting the user if the value is not in the interval range. 
                 Here part of task 1 is integrated with task 2.
             */
             while (true)
             {
-
+                rangeNum = ArrayReplicator.AskForNumber(textRange);
                 if (rangeNum >= min && rangeNum <= max)
                 {
                     return rangeNum;
                 }
-                else if (rangeNum < 0)
-                {
-                    Console.WriteLine("{0} is not in the specified range. Try again.", rangeNum);
-                    rangeNum = Int32.Parse(Console.ReadLine());
-                }
-                else
-                {
-                    textRange = string.Format("{0} is not in the specified range. Try again.", rangeNum);
-                    rangeNum = ArrayReplicator.AskForNumber(textRange);
-
-                }
+                Console.WriteLine(string.Format("{0} is not in the specified range. Try again.", rangeNum));
             }
         }
     }
