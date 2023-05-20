@@ -18,3 +18,5 @@ Write a description of the project here and don't forget to update the badges.
 [How to start coding](docs/how-to-use.md)  
 [How to update status badges](docs/how-to-update-badges.md)
         [![formatting](https://github.com/arsh052003/IOT1026-Assignment-1/actions/workflows/formatting.yml/badge.svg)](https://github.com/arsh052003/IOT1026-Assignment-1/actions/workflows/formatting.yml)
+
+        <img width="578" alt="Screen Shot 2023-05-19 at 08 45 04" src="https://github.com/arsh052003/IOT1026-Assignment-1/assets/122691385/02e26516-8611-446f-a018-a9e09e1acd86">
